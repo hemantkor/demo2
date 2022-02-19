@@ -1,0 +1,37 @@
+﻿@model SessionManagement.Models.User
+
+@{
+    ViewBag.Title = "Home";
+}
+
+<h2>Home</h2>
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+
+        <dt>
+            Welcome:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoginName)
+        </dd>
+
+        <dt>
+            Full Name:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.LoginName }) |
+    @Html.ActionLink("Back to List", "Index")
+    @Html.Partial("Logout")
+</p>
